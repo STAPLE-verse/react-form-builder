@@ -36,7 +36,7 @@
   </script>
 
   <div class="clearfix" style="margin: 10px; width:70%">
-    <h4 class="float-left">Preview</h4>
+    <h4 class="float-left">TEST</h4>
     <button class="btn btn-primary float-right" style="margin-right: 10px" id="button-preview">Preview Form</button>
     <div class="modal" id="preview-dialog">
       <div class="modal-dialog modal-lg">
@@ -71,7 +71,7 @@
     const ElementStore = ReactFormBuilder.default.ElementStore;
     const Registry = ReactFormBuilder.default.Registry;
     const formContainer = document.querySelector('#form-generator');
-    
+
     // *********************************************
     const TestComponent = function TestComponent() {
       return React.createElement("h2", null, "Hello");
@@ -122,7 +122,7 @@
         this._onUpdate = this._onChange.bind(this);
       }
 
-      componentDidMount() {        
+      componentDidMount() {
         ElementStore.subscribe(state => this._onUpdate(state.data));
         document.querySelector('#button-preview')
           .addEventListener('click', this.showPreview);
@@ -177,7 +177,7 @@
       }
     }
 
-    ReactDOM.render(e(FormGenerator), formContainer);        
+    ReactDOM.render(e(FormGenerator), formContainer);
   </script>
 </body>
 

@@ -56,7 +56,7 @@ export default class FormValidator extends React.Component {
         { this.state.errors.length > 0 &&
           <div className="alert alert-danger validation-error">
             <div className="clearfix">
-              <i className="fas fa-exclamation-triangle float-left"></i>
+              <FontAwesomeIcon icon="fas fa-exclamation-triangle float-left" />
               <ul className="float-left">
                 {errors}
               </ul>

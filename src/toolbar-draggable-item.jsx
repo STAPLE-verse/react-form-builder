@@ -6,6 +6,7 @@ import React from 'react';
 import { DragSource } from 'react-dnd';
 import ItemTypes from './ItemTypes';
 import ID from './UUID';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const cardSource = {
   beginDrag(props) {
@@ -24,7 +25,7 @@ class ToolbarItem extends React.Component {
     if (!connectDragSource) return null;
     return (
       connectDragSource(
-        <li onClick={onClick}><i className={data.icon}></i>{data.name}</li>,
+        <li onClick={onClick}> <FontAwesomeIcon icon={data.icon} /> {data.name} </li>,
       )
     );
   }

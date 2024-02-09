@@ -11,6 +11,8 @@ import ID from './UUID';
 import store from './stores/store';
 import { groupBy } from './functions';
 
+  import { faHeading, faFont } from '@fortawesome/free-solid-svg-icons'
+
 // function isDefaultItem(item) {
 //   const keys = Object.keys(item);
 //   return keys.filter(x => x !== 'element' && x !== 'key' && x !== 'group_name').length === 0;
@@ -96,7 +98,7 @@ class Toolbar extends React.Component {
       {
         key: 'Header',
         name: intl.formatMessage({ id: 'header-text' }),
-        icon: 'fas fa-heading',
+        icon: faHeading,
         static: true,
         content: intl.formatMessage({ id: 'place-holder-text' }),
       },
@@ -104,7 +106,7 @@ class Toolbar extends React.Component {
         key: 'Label',
         name: intl.formatMessage({ id: 'label' }),
         static: true,
-        icon: 'fas fa-font',
+        icon: faFont,
         content: intl.formatMessage({ id: 'place-holder-text' }),
       },
       {

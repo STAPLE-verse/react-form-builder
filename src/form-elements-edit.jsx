@@ -11,6 +11,7 @@ import { get } from './stores/requests';
 import ID from './UUID';
 import IntlMessages from './language-provider/IntlMessages';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const toolbar = {
   options: ['inline', 'list', 'textAlign', 'fontSize', 'link', 'history'],
@@ -141,7 +142,7 @@ export default class FormElementsEdit extends React.Component {
       <div>
         <div className="clearfix">
           <h4 className="float-left">{this.props.element.text}</h4>
-          <FontAwesomeIcon icon="float-right fas fa-times dismiss-edit" onClick={this.props.manualEditModeOff} />
+          <FontAwesomeIcon className = "float-right" icon= {faTimes} onClick={this.props.manualEditModeOff} />
         </div>
         { this.props.element.hasOwnProperty('content') &&
           <div className="form-group">

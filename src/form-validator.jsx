@@ -6,6 +6,9 @@ import React from 'react';
 import xss from 'xss';
 import IntlMessages from './language-provider/IntlMessages';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+
 const myxss = new xss.FilterXSS({
   whiteList: {
     u: [],
@@ -56,7 +59,7 @@ export default class FormValidator extends React.Component {
         { this.state.errors.length > 0 &&
           <div className="alert alert-danger validation-error">
             <div className="clearfix">
-              <FontAwesomeIcon icon="fas fa-exclamation-triangle float-left" />
+              <FontAwesomeIcon className = "float-left" icon= {faExclamationTriangle} />
               <ul className="float-left">
                 {errors}
               </ul>

@@ -3,6 +3,7 @@ import { DragSource } from 'react-dnd';
 import { getEmptyImage } from 'react-dnd-html5-backend';
 import ItemTypes from '../ItemTypes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGripVertical } from '@fortawesome/free-solid-svg-icons';
 
 const style = {
   // display: 'inline-block',
@@ -47,7 +48,7 @@ class DragHandle extends PureComponent {
 
   render() {
     const { connectDragSource } = this.props;
-    return connectDragSource(<div className="btn is-isolated" style={style} ><FontAwesomeIcon icon="is-isolated fas fa-grip-vertical" /></div>);
+    return connectDragSource(<div className="btn is-isolated" style={style} ><FontAwesomeIcon icon= {faGripVertical} /></div>);
   }
 }
 

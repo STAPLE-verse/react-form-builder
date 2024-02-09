@@ -13,6 +13,7 @@ import ComponentLabel from './component-label';
 import myxss from './myxss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faCamera, faFile, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const FormElements = {};
 
@@ -356,7 +357,7 @@ class Signature extends React.Component {
             : (<SignaturePad {...pad_props} />)
           }
           {canClear && (
-            <FontAwesomeIcon icon="fas fa-times clear-signature" onClick={this.clear} title="Clear Signature" />)}
+            <FontAwesomeIcon className = "clear-signature" icon= {faTimes} onClick={this.clear} title="Clear Signature" />)}
           <input {...props} />
         </div>
       </div>
@@ -687,7 +688,7 @@ class Camera extends React.Component {
                 />
                 <div className="image-upload-control">
                   <div className="btn btn-default">
-                    <FontAwesomeIcon icon="fas fa-camera" /> Upload Photo
+                    <FontAwesomeIcon icon= {faCamera} /> Upload Photo
                   </div>
                   <p>Select an image from your computer or device.</p>
                 </div>
@@ -706,7 +707,7 @@ class Camera extends React.Component {
                     className="btn btn-image-clear"
                     onClick={this.clearImage}
                   >
-                    <FontAwesomeIcon icon="fas fa-times" /> Clear Photo
+                    <FontAwesomeIcon icon= {faTimes}/> Clear Photo
                   </div>
                 </div>
               )}
@@ -790,7 +791,7 @@ class FileUpload extends React.Component {
                 className='btn btn-default'
                 onClick={this.saveFile}
               >
-                <FontAwesomeIcon icon ='fas fa-download' /> Download File
+                <FontAwesomeIcon icon = {faDownload} /> Download File
               </button>
             </div>
           ) : (
@@ -805,7 +806,7 @@ class FileUpload extends React.Component {
                 />
                 <div className='image-upload-control'>
                   <div className='btn btn-default'>
-                    <FontAwesomeIcon icon ='fas fa-file' /> Upload File
+                    <FontAwesomeIcon icon = {faFile} /> Upload File
                   </div>
                   <p>Select a file from your computer or device.</p>
                 </div>
@@ -834,7 +835,7 @@ class FileUpload extends React.Component {
                     className='btn btn-file-upload-clear'
                     onClick={this.clearFileUpload}
                   >
-                    <FontAwesomeIcon icon='fas fa-times' /> Clear File
+                    <FontAwesomeIcon icon= {faTimes} /> Clear File
                   </div>
                 </div>
               )}

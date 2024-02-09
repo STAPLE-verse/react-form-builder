@@ -2,6 +2,7 @@ import React from 'react';
 import { DragSource } from 'react-dnd';
 import ItemTypes from '../ItemTypes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGripVertical } from '@fortawesome/free-solid-svg-icons';
 
 const style = {
   // display: 'inline-block',
@@ -31,7 +32,7 @@ const gripSource = {
 };
 
 const Grip = ({ connectDragSource }) => connectDragSource(
-  <div className="btn is-isolated" style={style} ><FontAwesomeIcon icon="is-isolated fas fa-grip-vertical" /></div>,
+  <div className="btn is-isolated" style={style} ><FontAwesomeIcon icon= {faGripVertical} /></div>,
 );
 
 export default DragSource(

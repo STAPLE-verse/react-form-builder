@@ -6,6 +6,7 @@
  import ID from './UUID';
  import IntlMessages from './language-provider/IntlMessages';
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+ import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons'
 
  export default class DynamicOptionList extends React.Component {
    constructor(props) {
@@ -112,9 +113,9 @@
                      </div> }
                      <div className="col-sm-3">
                        <div className="dynamic-options-actions-buttons">
-                         <button onClick={this.addOption.bind(this, index)} className="btn btn-success"><FontAwesomeIcon icon="fas fa-plus-circle" /></button>
+                         <button onClick={this.addOption.bind(this, index)} className="btn btn-success"><FontAwesomeIcon icon= {faPlusCircle} /></button>
                          { index > 0
-                           && <button onClick={this.removeOption.bind(this, index)} className="btn btn-danger"><FontAwesomeIcon icon="fas fa-minus-circle" /></button>
+                           && <button onClick={this.removeOption.bind(this, index)} className="btn btn-danger"><FontAwesomeIcon icon= {faMinusCircle} /></button>
                          }
                        </div>
                      </div>

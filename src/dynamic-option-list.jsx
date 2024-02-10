@@ -98,7 +98,7 @@
                const this_key = `edit_${option.key}`;
                const val = (option.value !== this._setValue(option.text)) ? option.value : '';
                return (
-                 <li className="clearfix" key={this_key}>
+                 <li className="clear-both" key={this_key}>
                    <div className="row">
                      <div className="col-sm-6">
                        <input tabIndex={index + 1} className="form-control" style={{ width: '100%' }} type="text" name={`text_${index}`} placeholder="Option text" value={option.text} onBlur={this.updateOption.bind(this)} onChange={this.editOption.bind(this, index)} />

@@ -58,13 +58,13 @@ export default class FormValidator extends React.Component {
       <div>
         { this.state.errors.length > 0 &&
           <div className="alert alert-danger validation-error">
-            <div className="clearfix">
+            <div className="clear-both">
               <FontAwesomeIcon className = "float-left" icon= {faExclamationTriangle} />
               <ul className="float-left">
                 {errors}
               </ul>
             </div>
-            <div className="clearfix">
+            <div className="clear-both">
               <a className="float-right btn btn-default btn-sm btn-danger" onClick={this.dismissModal.bind(this)}><IntlMessages id="dismiss" /></a>
             </div>
           </div>

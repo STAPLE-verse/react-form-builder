@@ -911,7 +911,7 @@ class Range extends React.Component {
         <div className="form-group">
           <ComponentLabel {...this.props} />
           <div className="range">
-            <div className="clearfix">
+            <div className="clear-both">
               <span className="float-left">{this.props.data.min_label}</span>
               <span className="float-right">{this.props.data.max_label}</span>
             </div>

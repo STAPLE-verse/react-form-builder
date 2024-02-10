@@ -140,7 +140,7 @@ export default class FormElementsEdit extends React.Component {
 
     return (
       <div>
-        <div className="clearfix">
+        <div className="clear-both">
           <h4 className="float-left">{this.props.element.text}</h4>
           <FontAwesomeIcon className = "float-right" icon= {faTimes} onClick={this.props.manualEditModeOff} />
         </div>

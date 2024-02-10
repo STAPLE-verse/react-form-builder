@@ -93,12 +93,12 @@ export default class Demobar extends React.Component {
     }
 
     return (
-      <div className="clearfix" style={{ margin: '10px', width: '70%' }}>
-        <h4 className="float-left">Preview</h4>
+      <div className="clear-both" style={{ margin: '10px', width: '100%' }}>
+        <p className="float-left text-3xl">Preview</p>
         <button className="btn btn-primary float-right" style={{ marginRight: '10px' }} onClick={() => this.showPreview()}>Preview Form</button>
-        <button className="btn btn-default float-right" style={{ marginRight: '10px' }} onClick={() => this.showShortPreview()}>Alternate/Short Form</button>
-        <button className="btn btn-default float-right" style={{ marginRight: '10px' }} onClick={() => this.showRoPreview()}>Read Only Form</button>
-        <button className="btn btn-default float-right" style={{ marginRight: '10px' }} onClick={() => this.saveFormData()}>Save Form</button>
+        <button className="btn btn-secondary float-right" style={{ marginRight: '10px' }} onClick={() => this.showShortPreview()}>Alternate/Short Form</button>
+        <button className="btn btn-secondary float-right" style={{ marginRight: '10px' }} onClick={() => this.showRoPreview()}>Read Only Form</button>
+        <button className="btn btn-secondary float-right" style={{ marginRight: '10px' }} onClick={() => this.saveFormData()}>Save Form</button>
 
         { this.state.previewVisible &&
           <div className={modalClass} role="dialog">
@@ -119,7 +119,7 @@ export default class Demobar extends React.Component {
                   locale='en'/>
 
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-default" data-dismiss="modal" onClick={this.closePreview.bind(this)}>Close</button>
+                  <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={this.closePreview.bind(this)}>Close</button>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default class Demobar extends React.Component {
                   locale='en'/>
 
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-default" data-dismiss="modal" onClick={this.closePreview.bind(this)}>Close</button>
+                  <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={this.closePreview.bind(this)}>Close</button>
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@ export default class Demobar extends React.Component {
                   />
 
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-default" data-dismiss="modal" onClick={this.closePreview.bind(this)}>Close</button>
+                  <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={this.closePreview.bind(this)}>Close</button>
                 </div>
               </div>
             </div>

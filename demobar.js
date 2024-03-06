@@ -15,7 +15,7 @@ const answers = {};
 //   'rating_3B3491B3-71AC-4A68-AB8C-A2B5009346CB': 4,
 // };
 
-export default class Demobar extends React.Component {
+export default class DemoBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

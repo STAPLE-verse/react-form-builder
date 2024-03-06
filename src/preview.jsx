@@ -282,6 +282,7 @@ export default class Preview extends React.Component {
         <div className="Sortable">{items}</div>
         <PlaceHolder id="form-place-holder" show={items.length === 0} index={items.length} moveCard={this.cardPlaceHolder} insertCard={this.insertCard} />
         <CustomDragLayer/>
+        <button onClick={console.log(data)}>Save Form Data</button>
       </div>
     );
   }
